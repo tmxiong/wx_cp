@@ -1,0 +1,16 @@
+/**index.wxss**/
+.container {
+  /* display: flex; */
+  /* flex:1; */
+  /* background-color: #f00; */
+  /* justify-content: flex-start */
+
+}
+.banner {
+  
+}
+.scroll {
+  flex:1
+}
+
+@import '../template/template.wxss';

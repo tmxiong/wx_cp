@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<import src="../template/template.wxml" />
+
+<view class="container">
+
+  <!-- <image class="banner" src="http://y.gtimg.cn/music/photo_new/T003R720x288M000003G90F41NxicI.jpg" mode="aspectFill"></image> -->
+
+  <scroll-view class="scroll" scroll-y="true"  wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+
+
+    <template is="lottery-list" data="{{...item}}" />
+
+  </scroll-view>
+</view>
