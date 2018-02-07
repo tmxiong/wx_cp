@@ -1,4 +1,5 @@
 // pages/lottery-list/lottery-list.js
+import urls from '../../utils/urls.js'
 Page({
 
   /**
@@ -12,7 +13,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    var type = options.type;
+
+    this.setData({
+      type: type
+    })
+
+    wx.request({
+      url: urls.getLotteryList(type,0),
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function (res) {
+        // success
+        that.setData({
+          list: res.data.data
+        })
+
+        console.log(res.data)
+
+      },
+    })
   },
 
   /**

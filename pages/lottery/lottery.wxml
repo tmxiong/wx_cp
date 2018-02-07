@@ -1,2 +1,2 @@
 <!--pages/lottery.wxml-->
-<text>pages/lottery.wxml</text>
+<import src="../template/template.wxml" />

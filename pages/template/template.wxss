@@ -50,6 +50,10 @@
   margin-right: 5px;
   font-size: 14px;
 }
+.sjh {
+  margin-left: 10px;
+  color:#aaa
+}
 .icon {
   width:30px;
   height:30px;

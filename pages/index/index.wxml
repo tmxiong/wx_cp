@@ -3,12 +3,38 @@
 
 <view class="container">
 
-  <!-- <image class="banner" src="http://y.gtimg.cn/music/photo_new/T003R720x288M000003G90F41NxicI.jpg" mode="aspectFill"></image> -->
+  <image class="banner" src="http://y.gtimg.cn/music/photo_new/T003R720x288M000003G90F41NxicI.jpg" mode="aspectFill"></image>
 
-  <scroll-view class="scroll" scroll-y="true"  wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+  <scroll-view class="scroll" scroll-y="true" wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+
+    <navigator wx:if="{{index === 'twoColorBall'}}" url="/pages/lottery-list/lottery-list?type=twoColorBall" hover-class="navigator-hover">
+      <template is="lottery-list-twoColorBall" data="{{...item}}" />
+    </navigator>
 
 
-    <template is="lottery-list" data="{{...item}}" />
+    <navigator wx:if="{{index === 'bigSmileClarityPrize'}}" url="/pages/lottery-list/lottery-list?type=bigSmileClarity" hover-class="navigator-hover">
+      <template is="lottery-list-bigSmileClarityPrize" data="{{...item}}" />
+    </navigator>
+
+    <navigator wx:if="{{index === 'permutationFivePrize'}}" url="/pages/lottery-list/lottery-list?type=permutationFive" hover-class="navigator-hover">
+      <template is="lottery-list-permutationFivePrize" data="{{...item}}" />
+    </navigator>
+
+    <navigator wx:if="{{index === 'permutationThreePrize'}}" url="/pages/lottery-list/lottery-list?type=permutationThree" hover-class="navigator-hover">
+      <template is="lottery-list-permutationThreePrize" data="{{...item}}" />
+    </navigator>
+
+   <navigator wx:if="{{index === 'sevenSmilePrize'}}" url="/pages/lottery-list/lottery-list?type=sevenSmile" hover-class="navigator-hover">
+      <template is="lottery-list-sevenSmilePrize" data="{{...item}}" />
+    </navigator>
+
+    <navigator wx:if="{{index === 'sevenStarPrize'}}" url="/pages/lottery-list/lottery-list?type=sevenStar" hover-class="navigator-hover">
+      <template is="lottery-list-sevenStarPrize" data="{{...item}}" />
+   </navigator>
+
+    <navigator wx:if="{{index === 'welfareLotteryThreeDPrize'}}" url="/pages/lottery-list/lottery-list?type=welfareLotteryThreeD" hover-class="navigator-hover">
+      <template is="lottery-list-welfareLotteryThreeDPrize" data="{{...item}}" />
+    </navigator>
 
   </scroll-view>
 </view>

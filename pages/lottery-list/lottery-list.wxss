@@ -1,1 +1,2 @@
 /* pages/lottery-list/lottery-list.wxss */
+@import '../template/template.wxss';

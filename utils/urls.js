@@ -24,8 +24,8 @@ exports.getLotteryKind = function () {
 }
 
 // 彩票开奖列表
-exports.getLotteryList = function() {
-  return 'https://api.niubcaipiao.com/TwoColorBall/getPrizes'
+exports.getLotteryList = function(type,page) {
+  return 'https://api.niubcaipiao.com/'+ type +'/getPrizes'
 }
 
 // 彩票销售数据
