@@ -1,2 +1,40 @@
 <!--pages/lottery.wxml-->
 <import src="../template/template.wxml" />
+
+<view>
+
+<view class="t-head-content">
+  <view class="t-title">
+    <text>本期销量</text>
+    <text>12312元</text>
+  </view>
+
+  <view class="t-title" style="border:none">
+    <text>奖池</text>
+    <text>12312元</text>
+  </view>
+</view>
+  
+  
+  <view class="t-head">
+    <text>奖项</text>
+    <text>注数</text>
+    <text>每注奖金</text>
+  </view>
+
+  <view class="t-body">
+    <text>一等奖</text>
+    <text>6</text>
+    <text>45645645</text>
+  </view>
+    <view class="t-body">
+    <text>二等奖</text>
+    <text>6</text>
+    <text>45645645</text>
+  </view>
+    <view class="t-body">
+    <text>三等奖</text>
+    <text>6</text>
+    <text>45645645</text>
+  </view>
+</view>
