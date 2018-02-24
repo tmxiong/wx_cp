@@ -1,5 +1,11 @@
 /* pages/lottery.wxss */
-.t-head {
+
+
+
+
+
+
+/* .t-head {
   width:100%;
   height:30px;
   display: flex;
@@ -33,4 +39,4 @@
   height:40px;
   width:100%;
   color:#888
-}
+} */

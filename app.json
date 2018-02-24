@@ -19,23 +19,18 @@
     "backgroundColor": "#f9f9f9",
     "list": [
       {
-        "text": "首页",
+        "text": "低频彩",
         "pagePath": "pages/index/index",
         "iconPath": "imgs/home_icon.png",
         "selectedIconPath": "imgs/home_icon.png"
       },
       {
-        "text": "开奖",
+        "text": "高频彩",
         "pagePath": "pages/lottery/lottery",
         "iconPath": "imgs/home_icon.png",
         "selectedIconPath": "imgs/home_icon.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/mine/mine",
-        "iconPath": "imgs/home_icon.png",
-        "selectedIconPath": "imgs/home_icon.png"
       }
+    
     ]
   }
 }

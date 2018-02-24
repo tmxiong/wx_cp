@@ -2,26 +2,26 @@
 <import src="../template/template.wxml" />
 
 <scroll-view class="scroll" scroll-y="true" wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
-  <block wx:if="{{type === 'twoColorBall'}}">
-    <template is="lottery-list-twoColorBall" data="{{...item}}" />
+  <block wx:if="{{item.code === 'ssq'}}">
+    <template is="lottery-list-ssq" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'bigSmileClarity'}}">
-    <template is="lottery-list-bigSmileClarityPrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'dlt'}}">
+    <template is="lottery-list-dlt" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'permutationFive'}}">
-    <template is="lottery-list-permutationFivePrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'pl5'}}">
+    <template is="lottery-list-pl5" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'permutationThree'}}">
-    <template is="lottery-list-permutationThreePrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'pl3'}}">
+    <template is="lottery-list-pl3" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'sevenSmile'}}">
-    <template is="lottery-list-sevenSmilePrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'qlc'}}">
+    <template is="lottery-list-qlc" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'sevenStar'}}">
-    <template is="lottery-list-sevenStarPrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'qxc'}}">
+    <template is="lottery-list-qxc" data="{{...item}}" />
   </block>
-  <block wx:if="{{type === 'welfareLotteryThreeD'}}">
-    <template is="lottery-list-welfareLotteryThreeDPrize" data="{{...item}}" />
+   <block wx:if="{{item.code === 'fc3d'}}">
+    <template is="lottery-list-fc3d" data="{{...item}}" />
   </block>
 
 </scroll-view>

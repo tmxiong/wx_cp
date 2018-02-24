@@ -1,34 +1,32 @@
-// let urls = {
+Date.prototype.Format = function (fmt) { //author: meizz
+  var o = {
+    "M+": this.getMonth() + 1, //月份
+    "d+": this.getDate(), //日
+    "h+": this.getHours(), //小时
+    "m+": this.getMinutes(), //分
+    "s+": this.getSeconds(), //秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+    "S": this.getMilliseconds() //毫秒
+  };
+  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+  return fmt;
+}
 
-// };
-// module.exports = urls;
-
+let secret = 'eb7f104bd5c44f5fb6862b3b9a4b31af';
 let timeStamp = function () {
   return new Date().getTime();
 };
 
-// 福彩3d/高频彩/数字彩的列表链接
-exports.getPlayTips = function (type, offset) {
-  // type = fc/gpc/szc/csxw
-  return 'https://m.qmcai.com/support/cmsv2/information/queryContent?parameter=%7B%22command%22:%22queryContent%22,%22categoryId%22:%22' + type + '%22,%22offset%22:' + offset + ',%22size%22:15,%22platform%22:%22html%22,%22version%22:%225.2.16%22%7D&callback=jsonp5'
-};
 
-// 福彩3d/高频彩/数字彩的详情链接
-exports.getPlayTipsDetail = function (id) {
-  return 'https://m.qmcai.com/zixun/detail.html?_id=' + id + '&time=' + timeStamp();
-};
-
-// 彩票彩种列表
-exports.getLotteryKind = function () {
-  return 'https://api.niubcaipiao.com/Prizes/getList'
-}
 
 // 彩票开奖列表
-exports.getLotteryList = function(type,page) {
-  return 'https://api.niubcaipiao.com/'+ type +'/getPrizes'
+exports.getNewestLotteryCode = function(id) {
+  return 'https://route.showapi.com/44-1?code=' + id + '&showapi_appid=46754&showapi_test_draft=false&showapi_timestamp=' + timeStamp() + '&showapi_sign=' + secret;
 }
 
-// 彩票销售数据
-exports.getLotteryPrice = function () {
-  return 'https://api.niubcaipiao.com/TwoColorBall/getPrize?issue=2018015'
-}
+// 显示近20期开奖号码
+exports.getHistoryLotteryCode = function (id) {
+  return 'https://route.showapi.com/44-2?code=' + id + '&count=50&endTime=' + new Date().Format('yyyy-MM-dd hh:mm:ss') + '&showapi_appid=46754&showapi_test_draft=false&showapi_timestamp=' + timeStamp() + '&showapi_sign=' + secret;
+};

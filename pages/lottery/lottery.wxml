@@ -2,6 +2,17 @@
 <import src="../template/template.wxml" />
 
 <view>
+  <scroll-view>
+    <view  wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+      <navigator url="{{'/pages/lottery-list/lottery-list?type=' + item.code}}" hover-class="navigator-hover">
+        <template is="lottery-list-gpc" data="{{...item}}" />
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+
+
+<!-- <view>
 
 <view class="t-head-content">
   <view class="t-title">
@@ -37,4 +48,4 @@
     <text>6</text>
     <text>45645645</text>
   </view>
-</view>
+</view> -->

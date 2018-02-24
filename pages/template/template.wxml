@@ -1,141 +1,175 @@
 <!-- pages/template/template.wxml */ -->
 
-<template name="lottery-list-twoColorBall">
+<template name="lottery-list-ssq">
   
     <view class="item-container">
       <view class="text-container">
         <text class="title">双色球</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{red1}}</text>
-        <text class="code">{{red2}}</text>
-        <text class="code">{{red3}}</text>
-        <text class="code">{{red4}}</text>
-        <text class="code">{{red5}}</text>
-        <text class="code">{{red6}}</text>
-        <text class="code" style="background-color:#1aa3ff">{{blue}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
+        <text class="code">{{openCode[5]}}</text>
+        <text class="code" style="background-color:#1aa3ff">{{openCode[6]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view >
    </template>
 
-   <template name="lottery-list-bigSmileClarityPrize">
+   <template name="lottery-list-dlt">
     <view class="item-container">
       <view class="text-container">
         <text class="title">大乐透</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
-        <text class="code">{{fourth_num}}</text>
-        <text class="code">{{five_num}}</text>
-        <text class="code" style="background-color:#1aa3ff">{{after_first_num}}</text>
-        <text class="code" style="background-color:#1aa3ff">{{after_second_num}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
+        <text class="code" style="background-color:#1aa3ff">{{openCode[5]}}</text>
+        <text class="code" style="background-color:#1aa3ff">{{openCode[6]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
    </template>
 
-   <template name="lottery-list-sevenSmilePrize">
+   <template name="lottery-list-qlc">
     <view class="item-container">
       <view class="text-container">
         <text class="title">七乐彩</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
-        <text class="code">{{fourth_num}}</text>
-        <text class="code">{{five_num}}</text>
-        <text class="code">{{six_num}}</text>
-        <text class="code">{{seven_num}}</text>
-        <text class="code" style="background-color:#1aa3ff">{{eight_num}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
+        <text class="code">{{openCode[5]}}</text>
+        <text class="code">{{openCode[6]}}</text>
+        <text class="code" style="background-color:#1aa3ff">{{openCode[7]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
    </template>
 
 
-  <template name="lottery-list-sevenStarPrize">
+  <template name="lottery-list-qxc">
     <view class="item-container">
       <view class="text-container">
         <text class="title">七星彩</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
-        <text class="code">{{fourth_num}}</text>
-        <text class="code">{{five_num}}</text>
-        <text class="code">{{six_num}}</text>
-        <text class="code">{{seven_num}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
+        <text class="code">{{openCode[5]}}</text>
+        <text class="code">{{openCode[6]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
  </template>
 
 
-  <template name="lottery-list-welfareLotteryThreeDPrize">
+  <template name="lottery-list-fc3d">
     <view class="item-container">
       <view class="text-container">
         <text class="title">福彩3D</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
-        <text class="sjh">试机号:</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <!-- <text class="sjh">试机号:</text>
         <text class="sjh">{{test_first_num}}</text>
         <text class="sjh">{{test_second_num}}</text>
-        <text class="sjh">{{test_third_num}}</text>
+        <text class="sjh">{{test_third_num}}</text> -->
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
    </template>
 
 
-  <template name="lottery-list-permutationThreePrize">
+  <template name="lottery-list-pl3">
     <view class="item-container">
       <view class="text-container">
         <text class="title">排列3</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
   </template>
 
-  <template name="lottery-list-permutationFivePrize">
+  <template name="lottery-list-pl5">
     <view class="item-container">
       <view class="text-container">
         <text class="title">排列5</text>
-        <text class="issue">{{issue}}</text>
-        <text class="date">{{openPrizeDate}}</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
       </view>
       <view class="code-container">
-        <text class="code">{{first_num}}</text>
-        <text class="code">{{second_num}}</text>
-        <text class="code">{{third_num}}</text>
-        <text class="code">{{fourth_num}}</text>
-        <text class="code">{{five_num}}</text>
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
       </view>
-      <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
+    </view>
+ </template> 
+
+ <template name="lottery-list-gpc">
+    <view class="item-container">
+      <view class="text-container">
+        <text class="title">时时彩</text>
+        <text class="issue">{{expect}}</text>
+        <text class="date">{{time}}</text>
+      </view>
+      <view class="code-container">
+        <text class="code">{{openCode[0]}}</text>
+        <text class="code">{{openCode[1]}}</text>
+        <text class="code">{{openCode[2]}}</text>
+        <text class="code">{{openCode[3]}}</text>
+        <text class="code">{{openCode[4]}}</text>
+      </view>
+      <block wx:if="{{NewestLotteryCode}}">
+        <image class='icon' src='../../imgs/more_r_icon.png'></image>
+      </block>
     </view>
  </template> 
 

@@ -13,6 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '正在加载...',
+    })
     var that = this;
     var type = options.type;
 
@@ -21,16 +24,27 @@ Page({
     })
 
     wx.request({
-      url: urls.getLotteryList(type,0),
+      url: urls.getHistoryLotteryCode(type),
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function (res) {
         // success
-        that.setData({
-          list: res.data.data
-        })
 
+        let list = res.data.showapi_res_body.result;
+        for (let i = 0; i < list.length; i++) {
+          let openCode = list[i].openCode;
+          openCode = openCode.replace("+", ",");
+          openCode = openCode.split(",");
+          list[i].openCode = openCode;
+
+          list[i].time = list[i].time.substring(5, list[i].time.length)
+        }
+
+        that.setData({
+          list: list
+        })
+        wx.hideLoading();
         console.log(res.data)
 
       },

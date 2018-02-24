@@ -1,12 +1,13 @@
 // pages/index.js
 import urls from '../../utils/urls.js'
+import lotterys from '../../utils/lotterys.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    secret: 'eb7f104bd5c44f5fb6862b3b9a4b31af',
+    
     url: '',
   },
 
@@ -14,22 +15,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.request({
-      url: urls.getLotteryKind(),
-      data: {},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: function (res) {
-        // success
-        that.setData({
-          list: res.data.data
-        })
-
-        console.log(res.data)
-
-      },
+    wx.showLoading({
+      title: '正在加载...',
     })
+    var that = this;
+    this.id = '';
+    this.dpc = lotterys.dpc;
+    for (let i = 0; i < this.dpc.length; i++) {
+      this.id += this.dpc[i].id;
+      this.id += '|';
+    }
+
+    // wx.request({
+    //   url: urls.getNewestLotteryCode(this.id),
+    //   data: {},
+    //   method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    //   // header: {}, // 设置请求的 header
+    //   success: function (res) {
+    //     // success
+    //     let list = res.data.showapi_res_body.result;
+    //     for(let i = 0; i < list.length; i++) {
+    //       let openCode = list[i].openCode;
+    //       openCode = openCode.replace("+", ",");
+    //       openCode = openCode.split(",");
+    //       list[i].openCode = openCode;
+
+    //       list[i].time = list[i].time.substring(5,list[i].time.length)
+    //       list[i].NewestLotteryCode = true;
+    //     }
+
+
+        
+        
+    //     wx.hideLoading();
+    //     that.setData({
+    //       list: list,
+    //     })
+
+    //     //console.log(res.data)
+
+    //   },
+    // })
   },
 
   /**
