@@ -18,13 +18,17 @@ Page({
     })
     var that = this;
     var type = options.type;
+    var name = options.name;
+    var cz = options.cz;
 
     this.setData({
-      type: type
+      cz: cz,
+      name: name,
+      type: type,
     })
 
     wx.request({
-      url: urls.getHistoryLotteryCode(type),
+      url: urls.getHistoryLotteryCode(cz),
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -38,7 +42,11 @@ Page({
           openCode = openCode.split(",");
           list[i].openCode = openCode;
 
-          list[i].time = list[i].time.substring(5, list[i].time.length)
+          list[i].time = list[i].time.substring(5, list[i].time.length);
+          list[i].time = list[i].time.substring(0, 5);
+
+          list[i].type = type;
+          list[i].name = name;
         }
 
         that.setData({

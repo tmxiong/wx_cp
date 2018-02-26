@@ -4,7 +4,7 @@
 <view>
   <scroll-view>
     <view  wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
-      <navigator url="{{'/pages/lottery-list/lottery-list?type=' + item.code}}" hover-class="navigator-hover">
+      <navigator url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}" hover-class="navigator-hover">
         <template is="lottery-list-gpc" data="{{...item}}" />
       </navigator>
     </view>

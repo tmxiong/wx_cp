@@ -2,35 +2,35 @@
 <import src="../template/template.wxml" />
 
 <view>
-  <image class="banner" src="http://y.gtimg.cn/music/photo_new/T003R720x288M000003G90F41NxicI.jpg" mode="aspectFill"></image>
+  <image class="banner" src="../../imgs/banner.jpg" mode="aspectFill"></image>
 
   <scroll-view class="scroll" scroll-y="true">
     <view wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
-      <navigator wx:if="{{item.code === 'ssq'}}" url="/pages/lottery-list/lottery-list?type=ssq" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'ssq'}}" url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}" hover-class="navigator-hover">
         <template is="lottery-list-ssq" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'dlt'}}" url="/pages/lottery-list/lottery-list?type=dlt" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'dlt'}}"  url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-dlt" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'pl5'}}" url="/pages/lottery-list/lottery-list?type=pl5" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'pl5'}}"   url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-pl5" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'pl3'}}" url="/pages/lottery-list/lottery-list?type=pl3" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'pl3'}}"  url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-pl3" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'qlc'}}" url="/pages/lottery-list/lottery-list?type=qlc" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'qlc'}}"   url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-qlc" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'qxc'}}" url="/pages/lottery-list/lottery-list?type=qxc" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'qxc'}}"   url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-qxc" data="{{...item}}" />
       </navigator>
 
-      <navigator wx:if="{{item.code === 'fc3d'}}" url="/pages/lottery-list/lottery-list?type=fc3d" hover-class="navigator-hover">
+      <navigator wx:if="{{item.code === 'fc3d'}}"  url="{{'/pages/lottery-list/lottery-list?cz='+item.code+'&name='+item.name+'&type='+item.type}}"hover-class="navigator-hover">
         <template is="lottery-list-fc3d" data="{{...item}}" />
       </navigator>
     </view>

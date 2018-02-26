@@ -40,8 +40,19 @@ Page({
           openCode = openCode.split(",");
           list[i].openCode = openCode;
 
-          list[i].time = list[i].time.substring(5, list[i].time.length)
+          list[i].time = list[i].time.substring(5, list[i].time.length);
+          list[i].time = list[i].time.substring(0,5)
           list[i].NewestLotteryCode = true;
+          list[i].type = "gpc";
+      
+
+          for(let j = 0; j < that.gpc.length; j++) {
+            if (that.gpc[j].id === list[i].code) {
+              list[i].name = that.gpc[j].name;
+              break;
+            }
+          }
+          
         }
 
         wx.hideLoading();

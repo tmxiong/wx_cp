@@ -118,13 +118,13 @@ const data = {
       jieshao: 'ssc'
     },
 
-    {
+    // {
 
-      name: '北京快乐8',
-      id: 'bjkl8',
-      des: '火热高频游戏',
-      jieshao: 'kl8'
-    },
+    //   name: '北京快乐8',
+    //   id: 'bjkl8',
+    //   des: '火热高频游戏',
+    //   jieshao: 'kl8'
+    // },
 
     {
 

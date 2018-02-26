@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/lottery/lottery",
-    "pages/mine/mine",
+    "pages/web/web",
     "pages/template/template",
     "pages/lottery-list/lottery-list"
   ],
@@ -14,21 +14,21 @@
   },
   "tabBar": {
     "color": "#ccc",
-    "selectedColor": "#35495e",
+    "selectedColor": "#b72020",
     "borderStyle": "white",
     "backgroundColor": "#f9f9f9",
     "list": [
       {
         "text": "低频彩",
         "pagePath": "pages/index/index",
-        "iconPath": "imgs/home_icon.png",
-        "selectedIconPath": "imgs/home_icon.png"
+        "iconPath": "imgs/di.png",
+        "selectedIconPath": "imgs/di_ac.png"
       },
       {
         "text": "高频彩",
         "pagePath": "pages/lottery/lottery",
-        "iconPath": "imgs/home_icon.png",
-        "selectedIconPath": "imgs/home_icon.png"
+        "iconPath": "imgs/gao.png",
+        "selectedIconPath": "imgs/gao_ac.png"
       }
     
     ]

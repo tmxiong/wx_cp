@@ -30,3 +30,8 @@ exports.getNewestLotteryCode = function(id) {
 exports.getHistoryLotteryCode = function (id) {
   return 'https://route.showapi.com/44-2?code=' + id + '&count=50&endTime=' + new Date().Format('yyyy-MM-dd hh:mm:ss') + '&showapi_appid=46754&showapi_test_draft=false&showapi_timestamp=' + timeStamp() + '&showapi_sign=' + secret;
 };
+
+// 跳转链接
+exports.getJumpUrl = function() {
+  return 'https://ios-link.gg-app.com/get_init_data.php?type=ios&appid=2017369'
+}

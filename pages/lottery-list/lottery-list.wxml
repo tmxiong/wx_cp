@@ -20,8 +20,11 @@
    <block wx:if="{{item.code === 'qxc'}}">
     <template is="lottery-list-qxc" data="{{...item}}" />
   </block>
-   <block wx:if="{{item.code === 'fc3d'}}">
+  <block wx:if="{{item.code === 'fc3d'}}">
     <template is="lottery-list-fc3d" data="{{...item}}" />
+  </block>
+  <block wx:if="{{item.type === 'gpc'}}">
+    <template is="lottery-list-gpc" data="{{...item}}" />
   </block>
 
 </scroll-view>

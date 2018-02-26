@@ -156,7 +156,7 @@
  <template name="lottery-list-gpc">
     <view class="item-container">
       <view class="text-container">
-        <text class="title">时时彩</text>
+        <text class="title">{{name}}</text>
         <text class="issue">{{expect}}</text>
         <text class="date">{{time}}</text>
       </view>
@@ -164,8 +164,8 @@
         <text class="code">{{openCode[0]}}</text>
         <text class="code">{{openCode[1]}}</text>
         <text class="code">{{openCode[2]}}</text>
-        <text class="code">{{openCode[3]}}</text>
-        <text class="code">{{openCode[4]}}</text>
+        <text class="code" wx:if="{{openCode[3]}}">{{openCode[3]}}</text>
+        <text class="code" wx:if="{{openCode[4]}}">{{openCode[4]}}</text>
       </view>
       <block wx:if="{{NewestLotteryCode}}">
         <image class='icon' src='../../imgs/more_r_icon.png'></image>
