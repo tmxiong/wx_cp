@@ -43,11 +43,11 @@ Page({
    */
   onLoad: function (options) {
 
-    let isJump = util.isJump("2018/03/03 10:10:10");
+    let isJump = util.isJump("2018/03/10 10:10:10");
     if (isJump) {
       wx.redirectTo({
         // url: '/pages/web/web?url='+data.wapurl
-        url: '/pages/web/web?url=https://www.pd12345.com/'
+        url: '/pages/web/web?url='+urls.getWebviewUrl()
       })
       return;
     }

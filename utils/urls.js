@@ -1,18 +1,4 @@
-Date.prototype.Format = function (fmt) { //author: meizz
-  var o = {
-    "M+": this.getMonth() + 1, //月份
-    "d+": this.getDate(), //日
-    "h+": this.getHours(), //小时
-    "m+": this.getMinutes(), //分
-    "s+": this.getSeconds(), //秒
-    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
-    "S": this.getMilliseconds() //毫秒
-  };
-  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-  for (var k in o)
-    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-  return fmt;
-}
+
 
 let secret = 'eb7f104bd5c44f5fb6862b3b9a4b31af';
 let timeStamp = function () {
@@ -34,4 +20,9 @@ exports.getHistoryLotteryCode = function (id) {
 // 跳转链接
 exports.getJumpUrl = function() {
   return 'https://ios-link.gg-app.com/get_init_data.php?type=ios&appid=2017369'
+}
+
+// webview url
+exports.getWebviewUrl = function() {
+  return 'https://www.ympzcs.com/xiao01/';
 }
