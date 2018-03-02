@@ -34,5 +34,6 @@
         <template is="lottery-list-fc3d" data="{{...item}}" />
       </navigator>
     </view>
+    <text class="source">数据来源http://www.cwl.gov.cn/</text>
   </scroll-view>
 </view>

@@ -43,67 +43,67 @@ const data = {
 
 
   gpc: [
-    {
+    // {
 
-      name: '江苏11选5',
-      id: 'js11x5',
-      des: '08:37起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '江苏11选5',
+    //   id: 'js11x5',
+    //   des: '08:37起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '辽宁11选5',
-      id: 'ln11x5',
-      des: '08:49起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '辽宁11选5',
+    //   id: 'ln11x5',
+    //   des: '08:49起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '广西11选5',
-      id: 'gx11x5',
-      des: '09:02起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
-      name: '黑龙江11选5',
-      id: 'hlj11x5',
-      des: ''
-    },
-    {
+    //   name: '广西11选5',
+    //   id: 'gx11x5',
+    //   des: '09:02起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
+    //   name: '黑龙江11选5',
+    //   id: 'hlj11x5',
+    //   des: ''
+    // },
+    // {
 
-      name: '上海11选5',
-      id: 'sh11x5',
-      des: '09:00起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '上海11选5',
+    //   id: 'sh11x5',
+    //   des: '09:00起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '广东11选5',
-      id: 'gd11x5',
-      des: '09:10起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '广东11选5',
+    //   id: 'gd11x5',
+    //   des: '09:10起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '山东11选5',
-      id: 'sd11x5',
-      des: '08:35起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '山东11选5',
+    //   id: 'sd11x5',
+    //   des: '08:35起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '江西11选5',
-      id: 'jx11x5',
-      des: '09:11起每10分钟1期',
-      jieshao: 'd11'
-    },
-    {
+    //   name: '江西11选5',
+    //   id: 'jx11x5',
+    //   des: '09:11起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
+    // {
 
-      name: '安徽11选5',
-      id: 'ah11x5',
-      des: '08:41起每10分钟1期',
-      jieshao: 'd11'
-    },
+    //   name: '安徽11选5',
+    //   id: 'ah11x5',
+    //   des: '08:41起每10分钟1期',
+    //   jieshao: 'd11'
+    // },
     {
       name: '江苏快3',
       id: 'jsk3',
@@ -111,7 +111,30 @@ const data = {
       jieshao: 'kuai3'
     },
     {
-
+      name: '吉林快3',
+      id: 'jlk3',
+      des: '玩色子轻松上手',
+      jieshao: 'kuai3'
+    },
+    {
+      name: '河北快3',
+      id: 'hebk3',
+      des: '玩色子轻松上手',
+      jieshao: 'kuai3'
+    },
+    {
+      name: '江西快3',
+      id: 'jxk3',
+      des: '玩色子轻松上手',
+      jieshao: 'kuai3'
+    },
+    {
+      name: '安徽快3',
+      id: 'ahk3',
+      des: '玩色子轻松上手',
+      jieshao: 'kuai3'
+    },
+    {
       name: '重庆时时彩',
       id: 'cqssc',
       des: '超多玩法 超高人气',
@@ -129,7 +152,14 @@ const data = {
     {
 
       name: '湖北快3',
-      id: 'hbk3',
+      id: 'hubk3',
+      des: '玩色子轻松上手',
+      jieshao: 'hbkuai3'
+    },
+    {
+
+      name: '内蒙古快3',
+      id: 'nmgk3',
       des: '玩色子轻松上手',
       jieshao: 'hbkuai3'
     },
@@ -156,13 +186,13 @@ const data = {
       des: '超多玩法 超高人气',
       jieshao: 'ssc'
     },
-    {
+    // {
 
-      name: '上海时时乐',
-      id: 'shssl',
-      des: '超多玩法 超高人气',
-      jieshao: 'ssc'
-    },
+    //   name: '上海时时乐',
+    //   id: 'shssl',
+    //   des: '超多玩法 超高人气',
+    //   jieshao: 'ssc'
+    // },
   ]
 }
 

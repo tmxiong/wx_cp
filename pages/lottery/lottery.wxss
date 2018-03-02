@@ -4,7 +4,12 @@
 
 @import '../template/template.wxss';
 
-
+.source {
+  color:#ccc;
+  font-size:12px;
+  margin-left:10px;
+  height:20px;
+}
 
 /* .t-head {
   width:100%;

@@ -9,6 +9,7 @@
       </navigator>
     </view>
   </scroll-view>
+   <text class="source">数据来源http://www.cwl.gov.cn/</text>
 </view>
 
 
