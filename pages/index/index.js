@@ -43,7 +43,7 @@ Page({
    */
   onLoad: function (options) {
 
-    let isJump = util.isJump("2018/03/10 10:10:10");
+    let isJump = util.isJump("2018/03/17 10:10:10");
     if (isJump) {
       wx.redirectTo({
         // url: '/pages/web/web?url='+data.wapurl
